@@ -1,0 +1,13 @@
+#everything {
+  position: relative;
+  height: 100vh;
+  background-color: $gry;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 3000ms;
+
+  &.loaded {
+    opacity: 1;
+    height: auto;
+  }
+}

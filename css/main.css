@@ -553,7 +553,106 @@ img {
 
 #everything {
   position: relative;
+  height: 100vh;
+  background-color: #bdbdbd;
+  overflow: hidden;
   opacity: 0;
   transition: opacity 3000ms; }
   #everything.loaded {
-    opacity: 1; }
+    opacity: 1;
+    height: auto; }
+
+.landing {
+  position: relative;
+  height: 100vh;
+  background-color: #f1f0f1; }
+  .landing:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 140px; }
+
+.main-logo {
+  position: absolute;
+  top: 20px;
+  left: 80px;
+  height: 140px;
+  width: 706px; }
+  .main-logo img {
+    height: 140px;
+    width: auto; }
+
+.main-line {
+  position: absolute;
+  top: 20px;
+  left: 786px;
+  right: 120px;
+  height: 140px; }
+  .main-line:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    left: 40px;
+    right: 40px;
+    height: 10px;
+    background-color: #726249;
+    transition: left 1000ms; }
+  .main-line.line-trigger:before {
+    left: 120px; }
+
+.main-menu-trigger {
+  position: absolute;
+  top: 50px;
+  right: 40px;
+  height: 80px;
+  width: 80px; }
+  .main-menu-trigger:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 6px solid #69020B;
+    border-radius: 50%; }
+  .main-menu-trigger img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-45%);
+            transform: translateX(-50%) translateY(-45%);
+    width: 60px; }
+
+.landing-image {
+  position: absolute;
+  top: 140px;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
+  background-image: url("../assets/img/great-lakes-ice.jpg");
+  background-position: center center;
+  background-size: cover; }
+
+.established {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  height: 60px;
+  width: 126px; }
+  .established img {
+    height: 60px;
+    width: auto; }
+
+.landing-image {
+  z-index: 111; }
+
+.landing:before,
+.main-logo,
+.main-line,
+.main-menu-trigger,
+.established {
+  z-index: 666; }

@@ -1,0 +1,114 @@
+.landing {
+  position: relative;
+  height: 100vh;
+  background-color: $primaryBG;
+  // border: 10px solid $blk;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 140px;
+    // background-color: $wht3;
+  }
+}
+
+.main-logo {
+  position: absolute;
+  top: 20px;
+  left: 80px;
+  height: 140px;
+  width: 706px;
+  // background-color: $gry;
+  img {
+    height: 140px;
+    width: auto;
+  }
+}
+
+.main-line {
+  position: absolute;
+  top: 20px;
+  left: 786px;
+  right: 120px;
+  height: 140px;
+  // background-color: $gry1;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 40px;
+    right: 40px;
+    height: 10px;
+    background-color: $brown;
+    transition: left 1000ms;
+  }
+  &.line-trigger:before {
+    left: 120px;
+  }
+}
+
+.main-menu-trigger {
+  position: absolute;
+  top: 50px;
+  right: 40px;
+  height: 80px;
+  width: 80px;
+  // background-color: $gry;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 6px solid $red;
+    border-radius: 50%;
+  }
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-45%);
+    width: 60px;
+  }
+}
+
+.landing-image {
+  position: absolute;
+  top: 140px;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
+  // background-color: $gry2;
+  background-image: url('../assets/img/great-lakes-ice.jpg');
+  background-position: center center;
+  background-size: cover;
+}
+
+.established {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  height: 60px;
+  width: 126px;
+  // background-color: $gry;
+  img {
+    height: 60px;
+    width: auto;
+  }
+}
+
+// z-index's
+
+.landing-image
+  {  z-index: 111; }
+
+.landing:before,
+.main-logo,
+.main-line,
+.main-menu-trigger,
+.established
+  {  z-index: 666; }

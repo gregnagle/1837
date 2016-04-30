@@ -34,12 +34,3 @@ img   { display: block;}
   display: table;
   clear: both;
 }
-
-#everything {
-	position: relative;
-	opacity: 0;
-	transition: opacity 3000ms;
-	// padding: 40px 0;
-	// background-color: $green;
-	&.loaded { opacity: 1}
-}
