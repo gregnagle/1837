@@ -10,7 +10,7 @@
     left: 0;
     right: 0;
     height: 140px;
-    // background-color: $wht3;
+    background-color: $primaryBG;
   }
 }
 
@@ -43,7 +43,7 @@
     height: 10px;
     width: 100%;
     background-color: $brown;
-    transition: width 1000ms;
+    transition: width 300ms;
   }
   &.line-trigger:before {
     width: 66%;
@@ -66,14 +66,73 @@
     left: 0;
     border: 6px solid $red;
     border-radius: 50%;
+    transition: all 150ms;
   }
-  img {
+  .u-p {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-45%);
     width: 60px;
+    fill: $red;
+    transition: all 300ms;
   }
+  &.triggered {
+    &:before { background-color: $red; }
+    .u-p { fill: $primaryBG}
+  }
+  &:hover { cursor: pointer; }
+}
+
+.main-menu-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 140px;
+  background-color: $wht3;
+}
+
+.main-menu {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 33px 0 27px 0;
+  background-color: $primaryBG;
+  transition: transform 300ms;
+  &.main-menu-active { transform: translateY(100%); }
+  ul {
+    float: right;
+    padding: 0 80px;
+  }
+  li {
+    position: relative;
+    display: block;
+    float: left;
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 30px;
+      left: 100%;
+      height: 3px;
+      background-color: $brown;
+      transition: left 300ms;
+    }
+    &:hover:before {
+      left: 0;
+    }
+  }
+  a {
+    color: $red;
+    padding: 0 20px;
+    font-size: 1.25rem;
+    font-family: "industry-inc-base",sans-serif;
+    font-weight: 500;
+    // background-color: $wht;
+  }
+
 }
 
 .landing-image {
@@ -105,6 +164,9 @@
 
 .landing-image
   {  z-index: 111; }
+
+.main-menu-wrap
+  { z-index: 333; }
 
 .landing:before,
 .main-logo,
