@@ -30,8 +30,8 @@
 .main-line {
   position: absolute;
   top: 20px;
-  left: 786px;
-  right: 120px;
+  left: 826px;
+  right: 160px;
   height: 140px;
   // background-color: $gry1;
   &:before {
@@ -39,14 +39,14 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: 40px;
-    right: 40px;
+    right: 0;
     height: 10px;
+    width: 100%;
     background-color: $brown;
-    transition: left 1000ms;
+    transition: width 1000ms;
   }
   &.line-trigger:before {
-    left: 120px;
+    width: 66%;
   }
 }
 
